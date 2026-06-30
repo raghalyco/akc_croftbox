@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AKC Craftbox — Custom Paper Packaging for Every Business</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --g1:#0E2318;--g2:#1B3D2A;--g3:#2D6A4F;--g4:#52B788;
+  --k1:#7A4F08;--k2:#A8690F;--k3:#C88A2A;--k4:#E8B860;
+  --cr:#FAF6ED;--cr2:#F0E8D0;--cr3:#E0D4B0;
+  --wh:#FFFFFF;--dk:#080F0A;--md:#3A4A3C;--lt:#7A8C7A;
+  --bl:#1A4A7A;--rd:#A02820;--pp:#5A2A8A;--or:#C06018;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cr);color:var(--dk);overflow-x:hidden}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 56px;
+  background:rgba(8,15,10,0.97);
+  border-bottom:1px solid rgba(200,138,42,0.2);
+  transition:all 0.3s;
+}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nlm{
+  width:38px;height:38px;border-radius:5px;
+  background:linear-gradient(135deg,var(--k3),var(--k1));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#fff;
+}
+.nlt{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:rgba(255,255,255,0.9);letter-spacing:0.05em}
+.nlt span{color:var(--k3)}
+.nav-right{display:flex;align-items:center;gap:32px}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--k3)}
+.nav-cta{
+  background:var(--k3);color:#fff;
+  padding:10px 22px;border-radius:3px;
+  font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;transition:background 0.2s;
+}
+.nav-cta:hover{background:var(--k1)}
+
+/* HERO */
+.hero{
+  min-height:100vh;background:var(--g1);
+  position:relative;overflow:hidden;
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;gap:0;
+  padding:100px 56px 80px;
+}
+.hero-bg-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(200,138,42,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(200,138,42,0.04) 1px,transparent 1px);
+  background-size:60px 60px;
+  pointer-events:none;
+}
+.hero-glow{
+  position:absolute;top:-200px;right:-200px;
+  width:800px;height:800px;
+  background:radial-gradient(ellipse,rgba(27,61,42,0.7) 0%,transparent 65%);
+  pointer-events:none;
+}
+.hero-glow2{
+  position:absolute;bottom:-300px;left:-100px;
+  width:600px;height:600px;
+  background:radial-gradient(ellipse,rgba(168,105,15,0.15) 0%,transparent 60%);
+  pointer-events:none;
+}
+
+.hero-left{position:relative;z-index:2}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(200,138,42,0.12);border:1px solid rgba(200,138,42,0.25);
+  padding:8px 16px;border-radius:20px;
+  font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--k3);
+  margin-bottom:28px;
+}
+.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--k3)}
+.hero-h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.8rem,5vw,4.8rem);font-weight:700;line-height:1.1;
+  color:#fff;margin-bottom:24px;
+}
+.hero-h1 em{font-style:italic;color:var(--k3)}
+.hero-p{font-size:0.95rem;line-height:1.75;color:rgba(255,255,255,0.45);max-width:460px;margin-bottom:40px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-g{background:var(--g3);color:#fff;padding:14px 32px;border-radius:3px;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border:2px solid var(--g3);transition:all 0.2s}
+.btn-g:hover{background:transparent;color:var(--g4)}
+.btn-k{background:var(--k3);color:#fff;padding:14px 32px;border-radius:3px;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border:2px solid var(--k3);transition:all 0.2s}
+.btn-k:hover{background:transparent;color:var(--k3)}
+.btn-o{background:transparent;color:rgba(255,255,255,0.5);padding:14px 32px;border-radius:3px;font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border:2px solid rgba(255,255,255,0.12);transition:all 0.2s}
+.btn-o:hover{border-color:rgba(255,255,255,0.35);color:#fff}
+
+.hero-stats{
+  display:flex;gap:32px;margin-top:48px;
+  padding-top:32px;border-top:1px solid rgba(255,255,255,0.07);
+}
+.hs{text-align:left}
+.hs-n{font-family:'Space Mono',monospace;font-size:1.6rem;font-weight:700;color:var(--k3);display:block}
+.hs-l{font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+
+/* Hero right — box showcase */
+.hero-right{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:20px}
+
+.showcase-row{display:flex;gap:16px;align-items:center}
+.sc-box{
+  border-radius:6px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;cursor:default;
+  transition:transform 0.3s,box-shadow 0.3s;position:relative;overflow:hidden;
+}
+.sc-box:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.4)!important}
+
+/* Premium bakery box */
+.scb-premium{
+  width:200px;height:140px;
+  background:linear-gradient(135deg,#F8F3E5,#EDE2C0);
+  border:1px solid rgba(0,0,0,0.06);
+  box-shadow:0 12px 32px rgba(0,0,0,0.35);
+}
+.scb-premium-inner{
+  width:60px;height:60px;
+  background:linear-gradient(135deg,#3A2010,#5C3520);
+  transform:rotate(45deg);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 8px;
+}
+.scb-premium-text{transform:rotate(-45deg);font-family:'Cormorant Garamond',serif;font-size:0.45rem;font-weight:700;color:rgba(240,210,140,0.95);letter-spacing:0.15em;text-transform:uppercase;display:block}
+.scb-premium-tag{background:rgba(55,25,10,0.8);padding:3px 14px;border-radius:2px;font-family:'Cormorant Garamond',serif;font-size:0.42rem;color:rgba(230,200,130,0.9);font-style:italic;letter-spacing:0.06em}
+.scb-premium-lines{position:absolute;inset:0;background-image:linear-gradient(135deg,transparent 40%,rgba(0,0,0,0.03) 40%,rgba(0,0,0,0.03) 41%,transparent 41%),linear-gradient(225deg,transparent 40%,rgba(0,0,0,0.03) 40%,rgba(0,0,0,0.03) 41%,transparent 41%)}
+
+/* Kraft delivery */
+.scb-kraft{
+  width:160px;height:120px;
+  background:linear-gradient(160deg,#D4A55A,#B8832A);
+  box-shadow:0 10px 28px rgba(0,0,0,0.4);
+  border:1px solid rgba(0,0,0,0.1);
+}
+.scb-kraft-brand{
+  background:rgba(180,40,20,0.9);
+  padding:4px 20px;font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:0.55rem;font-weight:700;letter-spacing:0.12em;
+  text-transform:uppercase;color:rgba(255,220,180,0.95);
+}
+.scb-kraft-tagline{font-size:0.4rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px}
+
+/* Gift box */
+.scb-gift{
+  width:140px;height:130px;
+  background:linear-gradient(135deg,#1A3A2A,#2A5A3A);
+  box-shadow:0 10px 28px rgba(0,0,0,0.4);
+  border:1px solid rgba(82,183,136,0.15);
+}
+.scb-gift-ribbon{width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--k3),transparent);margin-bottom:8px}
+.scb-gift-icon{font-size:1.8rem;margin-bottom:6px}
+.scb-gift-label{font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+
+.sc-label{font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:8px}
+
+/* Floating badge on hero */
+.hero-badge{
+  position:absolute;top:30px;right:0;
+  background:rgba(200,138,42,0.15);border:1px solid rgba(200,138,42,0.25);
+  padding:12px 18px;border-radius:6px;
+  font-size:0.7rem;color:var(--k3);
+  display:flex;align-items:center;gap:8px;
+}
+.hb-dot{width:8px;height:8px;border-radius:50%;background:var(--g4);animation:pulse2 2s infinite}
+@keyframes pulse2{0%,100%{opacity:1}50%{opacity:0.4}}
+
+/* SECTION COMMONS */
+section{padding:90px 56px}
+.sl{font-size:0.58rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--k2);margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.sl::before{content:'';width:28px;height:1px;background:var(--k2)}
+.sh{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--dk);line-height:1.2;margin-bottom:14px}
+.sh em{font-style:italic;color:var(--g2)}
+.ss{font-size:0.9rem;color:var(--lt);line-height:1.75;max-width:540px;margin-bottom:56px}
+
+/* PRODUCTS */
+.products{background:#fff}
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pc{background:var(--cr);border-radius:8px;overflow:hidden;transition:all 0.3s;border:1px solid var(--cr2)}
+.pc:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(0,0,0,0.1);border-color:var(--k3)}
+.pc-vis{height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.pc-body{padding:22px}
+.pc-cat{font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:4px}
+.pc-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--dk);margin-bottom:8px}
+.pc-desc{font-size:0.75rem;color:var(--lt);line-height:1.65;margin-bottom:14px}
+.pc-tags{display:flex;flex-wrap:wrap;gap:5px}
+.ptag{font-size:0.57rem;padding:3px 8px;border-radius:20px;font-weight:500;letter-spacing:0.04em}
+
+/* INDUSTRIES — THE BIG SECTION */
+.industries{background:var(--dk)}
+.industries .sh{color:#fff}
+.industries .ss{color:rgba(255,255,255,0.4)}
+
+.ind-tabs{display:flex;gap:0;flex-wrap:wrap;margin-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.ind-tab{
+  padding:12px 22px;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:rgba(255,255,255,0.35);cursor:pointer;border:none;background:none;
+  border-bottom:2px solid transparent;margin-bottom:-1px;transition:all 0.2s;font-family:'Plus Jakarta Sans',sans-serif;
+}
+.ind-tab:hover{color:rgba(255,255,255,0.6)}
+.ind-tab.active{color:var(--k3);border-bottom-color:var(--k3)}
+
+.ind-panel{display:none}
+.ind-panel.active{display:block}
+
+.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ic{
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);
+  border-radius:8px;padding:20px;transition:all 0.25s;cursor:default;
+  position:relative;overflow:hidden;
+}
+.ic::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.ic:hover{background:rgba(255,255,255,0.08);transform:translateY(-3px)}
+.ic-icon{font-size:1.8rem;margin-bottom:12px}
+.ic-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:#fff;margin-bottom:6px}
+.ic-desc{font-size:0.7rem;color:rgba(255,255,255,0.4);line-height:1.6;margin-bottom:12px}
+.ic-box-type{font-size:0.58rem;color:rgba(255,255,255,0.25);letter-spacing:0.08em;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06)}
+.ic-box-type strong{color:var(--k3)}
+
+/* Category accent colors */
+.cat-food .ic::before{background:linear-gradient(90deg,#C88A2A,#E8B860)}
+.cat-health .ic::before{background:linear-gradient(90deg,#1A8A5A,#2AB870)}
+.cat-tech .ic::before{background:linear(90deg,#1A5A8A,#2A80C8)}
+.cat-tech .ic::before{background:linear-gradient(90deg,#1A5A8A,#2A80C8)}
+.cat-agri .ic::before{background:linear-gradient(90deg,#3A8A1A,#5AB830)}
+.cat-beauty .ic::before{background:linear-gradient(90deg,#8A1A6A,#C030A0)}
+.cat-ecom .ic::before{background:linear-gradient(90deg,#1A3A8A,#2A60C8)}
+.cat-gift .ic::before{background:linear-gradient(90deg,#8A6A1A,#C8A030)}
+.cat-industry .ic::before{background:linear-gradient(90deg,#4A4A4A,#808080)}
+
+/* Count badge */
+.ind-summary{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  margin-top:40px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.07);
+}
+.is-card{text-align:center;padding:20px}
+.is-n{font-family:'Space Mono',monospace;font-size:2rem;font-weight:700;color:var(--k3);display:block}
+.is-l{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:4px}
+
+/* MARKET */
+.market{background:var(--g1);color:#fff;position:relative;overflow:hidden}
+.market::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(ellipse at 80% 50%,rgba(45,106,79,0.3) 0%,transparent 55%),
+  radial-gradient(ellipse at 10% 80%,rgba(168,105,15,0.15) 0%,transparent 50%);
+  pointer-events:none;
+}
+.mkt-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start}
+.mkt-left .sh{color:#fff}
+.mkt-left .ss{color:rgba(255,255,255,0.4)}
+.mkt-facts{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.mf{
+  background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);
+  border-radius:6px;padding:16px 20px;
+  display:flex;align-items:center;gap:16px;
+}
+.mf-num{font-family:'Space Mono',monospace;font-size:1.2rem;font-weight:700;color:var(--k3);min-width:90px}
+.mf-text{font-size:0.75rem;color:rgba(255,255,255,0.5);line-height:1.5}
+
+.mkt-right{}
+.bars-title{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:20px}
+.bar-item{margin-bottom:18px}
+.bar-header{display:flex;justify-content:space-between;margin-bottom:7px}
+.bar-label{font-size:0.75rem;color:rgba(255,255,255,0.55)}
+.bar-pct{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--k3)}
+.bar-track{height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--g3),var(--k3));animation:bfill 1.8s ease-out forwards;transform-origin:left;width:0}
+@keyframes bfill{to{width:var(--w)}}
+
+.mkt-blr{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+  margin-top:32px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.08);
+}
+.blr-card{
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);
+  border-radius:6px;padding:18px 16px;text-align:center;
+}
+.blr-n{font-family:'Space Mono',monospace;font-size:1.4rem;font-weight:700;color:var(--k3)}
+.blr-l{font-size:0.62rem;color:rgba(255,255,255,0.35);letter-spacing:0.05em;margin-top:4px;line-height:1.4}
+
+/* HOW WE SCALE */
+.scale{background:#fff}
+.scale-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-top:20px;border:1px solid var(--cr2);border-radius:10px;overflow:hidden}
+.sg{padding:40px 36px;position:relative;border-right:1px solid var(--cr2)}
+.sg:last-child{border-right:none}
+.sg::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.sg-local::before{background:linear-gradient(90deg,var(--k3),var(--k4))}
+.sg-south::before{background:linear-gradient(90deg,var(--g3),var(--g4))}
+.sg-national::before{background:linear-gradient(90deg,var(--bl),#3A80C8)}
+.sg-phase{
+  font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;
+  margin-bottom:8px;font-weight:600;
+}
+.sg-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--dk);margin-bottom:12px;line-height:1.2}
+.sg-desc{font-size:0.78rem;color:var(--lt);line-height:1.7;margin-bottom:20px}
+.sg-targets{display:flex;flex-direction:column;gap:6px}
+.sg-t{font-size:0.7rem;color:var(--md);display:flex;align-items:center;gap:8px}
+.sg-t::before{content:'→';color:var(--k3);font-size:0.75rem}
+.sg-metric{
+  margin-top:20px;padding-top:16px;border-top:1px solid var(--cr2);
+  font-family:'Space Mono',monospace;
+  font-size:1.2rem;font-weight:700;color:var(--k2);
+}
+.sg-metric-l{font-size:0.6rem;color:var(--lt);letter-spacing:0.05em;font-family:'Plus Jakarta Sans',sans-serif}
+
+/* HOW WE REACH CLIENTS */
+.reach{background:var(--cr)}
+.reach-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.reach-channels{display:flex;flex-direction:column;gap:14px}
+.rch{
+  background:#fff;border:1px solid var(--cr2);border-radius:8px;
+  padding:20px 24px;display:grid;grid-template-columns:48px 1fr auto;
+  align-items:center;gap:16px;transition:all 0.2s;
+}
+.rch:hover{border-color:var(--k3);box-shadow:0 4px 20px rgba(0,0,0,0.06)}
+.rch-icon{width:48px;height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.rch-name{font-size:0.88rem;font-weight:600;color:var(--dk)}
+.rch-reach{font-size:0.68rem;color:var(--lt);margin-top:2px;line-height:1.4}
+.rch-badge{font-size:0.55rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:3px;white-space:nowrap}
+
+.reach-strategy{display:flex;flex-direction:column;gap:20px}
+.rs-card{
+  border-radius:8px;padding:24px;
+  border-left:3px solid;
+}
+.rs-title{font-size:0.9rem;font-weight:600;color:var(--dk);margin-bottom:8px}
+.rs-desc{font-size:0.75rem;color:var(--lt);line-height:1.65}
+
+/* PROCESS */
+.process{background:var(--g1);color:#fff}
+.process .sh{color:#fff}
+.process .ss{color:rgba(255,255,255,0.4)}
+.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-top:20px}
+.proc-steps::before{
+  content:'';position:absolute;top:36px;left:10%;right:10%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--k3),var(--k3),transparent);
+  z-index:0;
+}
+.ps{position:relative;z-index:1;text-align:center;padding:0 20px}
+.ps-num{
+  width:72px;height:72px;border-radius:50%;margin:0 auto 20px;
+  background:rgba(200,138,42,0.12);border:2px solid var(--k3);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Space Mono',monospace;font-size:1.1rem;font-weight:700;color:var(--k3);
+  transition:all 0.3s;
+}
+.ps:hover .ps-num{background:var(--k3);color:#fff}
+.ps-icon{font-size:1.6rem;margin-bottom:12px}
+.ps-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:#fff;margin-bottom:8px}
+.ps-desc{font-size:0.7rem;color:rgba(255,255,255,0.4);line-height:1.65}
+
+.custom-opts{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:14px;
+  margin-top:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.07);
+}
+.co{
+  text-align:center;padding:18px 10px;
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);
+  border-radius:6px;transition:all 0.2s;
+}
+.co:hover{background:rgba(255,255,255,0.08);border-color:var(--k3)}
+.co-i{font-size:1.5rem;margin-bottom:8px}
+.co-l{font-size:0.62rem;font-weight:600;color:#fff;margin-bottom:4px}
+.co-v{font-size:0.58rem;color:rgba(255,255,255,0.35);line-height:1.5}
+
+/* PROOF */
+.proof{background:#fff}
+.proof-row{display:flex;gap:40px;align-items:center;flex-wrap:wrap;margin-top:20px}
+.pr{display:flex;align-items:center;gap:14px}
+.pr-logo{width:52px;height:52px;border-radius:8px;background:var(--cr);display:flex;align-items:center;justify-content:center;font-size:1.5rem;border:1px solid var(--cr2)}
+.pr-name{font-size:0.88rem;font-weight:600;color:var(--dk)}
+.pr-sub{font-size:0.65rem;color:var(--lt)}
+.pr-div{width:1px;height:40px;background:var(--cr2)}
+.proof-banner{
+  margin-top:40px;background:var(--g1);border-radius:10px;
+  padding:32px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;
+}
+.pb-text{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#fff;line-height:1.4}
+.pb-text em{color:var(--k3);font-style:italic}
+.pb-stats{display:flex;gap:40px}
+.pbs{text-align:center}
+.pbs-n{font-family:'Space Mono',monospace;font-size:1.4rem;font-weight:700;color:var(--k3)}
+.pbs-l{font-size:0.58rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.1em}
+
+/* CTA */
+.cta-sec{
+  background:var(--g2);color:#fff;text-align:center;
+  padding:100px 56px;position:relative;overflow:hidden;
+}
+.cta-sec::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(45deg,transparent 0,transparent 40px,rgba(255,255,255,0.02) 40px,rgba(255,255,255,0.02) 41px);
+}
+.cta-sl{font-size:0.58rem;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:14px}
+.cta-h{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:14px;position:relative;z-index:1}
+.cta-h em{color:var(--k3);font-style:italic}
+.cta-p{font-size:0.92rem;color:rgba(255,255,255,0.45);margin-bottom:40px;position:relative;z-index:1}
+.cta-form{display:flex;gap:10px;max-width:520px;margin:0 auto 16px;position:relative;z-index:1}
+.cta-in{flex:1;padding:15px 20px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:3px;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.88rem;outline:none}
+.cta-in::placeholder{color:rgba(255,255,255,0.3)}
+.cta-in:focus{border-color:var(--k3)}
+.cta-btn{background:var(--k3);color:#fff;padding:15px 28px;border:none;border-radius:3px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background 0.2s}
+.cta-btn:hover{background:var(--k1)}
+.cta-note{font-size:0.62rem;color:rgba(255,255,255,0.25);position:relative;z-index:1}
+.cta-note strong{color:rgba(255,255,255,0.45)}
+
+/* FOOTER */
+footer{background:var(--dk);padding:32px 56px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(200,138,42,0.12)}
+.fl{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:rgba(255,255,255,0.4)}
+.fl span{color:var(--k3)}
+.fc{font-size:0.62rem;color:rgba(255,255,255,0.2)}
+.fr{font-size:0.6rem;color:rgba(255,255,255,0.2);text-align:right;line-height:1.6}
+
+/* SCROLL ANIMATIONS */
+.fi{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fi.vis{opacity:1;transform:translateY(0)}
+.fi-d1{transition-delay:0.1s}.fi-d2{transition-delay:0.2s}.fi-d3{transition-delay:0.3s}.fi-d4{transition-delay:0.4s}
+
+@media(max-width:1100px){
+  nav{padding:14px 20px}.nav-links{display:none}
+  .hero{grid-template-columns:1fr;padding:100px 24px 60px}.hero-right{display:none}
+  section{padding:70px 24px}
+  .prod-grid,.ind-grid{grid-template-columns:1fr 1fr}
+  .mkt-grid,.reach-grid{grid-template-columns:1fr;gap:40px}
+  .scale-grid,.proc-steps{grid-template-columns:1fr}
+  .proc-steps::before{display:none}
+  .custom-opts{grid-template-columns:repeat(3,1fr)}
+  .ind-tabs{overflow-x:auto}
+  .mkt-blr{grid-template-columns:1fr 1fr}
+  footer{flex-direction:column;gap:12px;text-align:center}.fr{text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nlm">A</div>
+    <div class="nlt"><span>AKC</span> Craftbox</div>
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#industries">Industries</a>
+      <a href="#market">Market</a>
+      <a href="#scale">Scale</a>
+      <a href="#contact">Get a Quote</a>
+    </div>
+    <a href="#contact" class="nav-cta">Request Sample</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+
+  <div class="hero-left">
+    <div class="hero-tag">Bangalore · Est. 2026 · 100% Paper Packaging</div>
+    <h1 class="hero-h1">
+      Custom Paper Boxes<br>for <em>Every Business</em><br>That Delivers
+    </h1>
+    <p class="hero-p">From premium bakery boxes to industrial shipping cartons — AKC Craftbox manufactures fully customized paper packaging for 12+ industries across Bangalore, South India and beyond. Your brand, your size, your quantity.</p>
+    <div class="hero-btns">
+      <a href="#industries" class="btn-k">Explore Industries</a>
+      <a href="#products" class="btn-o">View Products</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hs"><span class="hs-n">12+</span><span class="hs-l">Industries Served</span></div>
+      <div class="hs"><span class="hs-n">500+</span><span class="hs-l">Box Styles</span></div>
+      <div class="hs"><span class="hs-n">MOQ 50</span><span class="hs-l">Units Min. Order</span></div>
+      <div class="hs"><span class="hs-n">48hr</span><span class="hs-l">Sample Ready</span></div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div style="position:relative;width:100%">
+      <div class="hero-badge">
+        <div class="hb-dot"></div>
+        <span style="font-size:0.62rem;color:rgba(255,255,255,0.7)">Taking orders — Bangalore & pan-India</span>
+      </div>
+    </div>
+    <div class="showcase-row" style="margin-top:40px">
+      <div style="text-align:center">
+        <div class="sc-box scb-premium">
+          <div class="scb-premium-lines"></div>
+          <div class="scb-premium-inner"><div class="scb-premium-text">YOUR<br>BRAND</div></div>
+          <div class="scb-premium-tag">Premium Rigid Box</div>
+        </div>
+        <div class="sc-label">Bakeries · Gifting · Premium</div>
+      </div>
+      <div style="text-align:center">
+        <div class="sc-box scb-kraft">
+          <div class="scb-kraft-brand">YOUR BRAND</div>
+          <div class="scb-kraft-tagline">Custom Printed · Kraft</div>
+        </div>
+        <div class="sc-label">QSRs · Cloud Kitchens · D2C</div>
+      </div>
+      <div style="text-align:center">
+        <div class="sc-box scb-gift">
+          <div class="scb-gift-ribbon"></div>
+          <div class="scb-gift-icon">🎁</div>
+          <div class="scb-gift-label">Premium Gift</div>
+        </div>
+        <div class="sc-label">Corporate · Events · Export</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:14px;font-size:0.6rem;color:rgba(255,255,255,0.2);letter-spacing:0.12em;text-transform:uppercase">Tap any industry below to see your box options</div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="sl">What We Make</div>
+  <h2 class="sh">Six Core Product Lines.<br>Every Industry, <em>Covered.</em></h2>
+  <p class="ss">All products are fully customizable — your dimensions, your design, your brand. We manufacture in Bangalore and deliver across India.</p>
+  <div class="prod-grid fi">
+
+    <div class="pc">
+      <div class="pc-vis" style="background:linear-gradient(135deg,#FBF6E8,#EEE2C0)">
+        <div style="width:90px;height:65px;background:linear-gradient(135deg,#F0EAD0,#E4D8A8);border-radius:4px;box-shadow:0 8px 20px rgba(0,0,0,0.12);display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.07)"><span style="font-size:1.8rem">🥐</span></div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-cat" style="color:#A8690F">Bakery · Patisserie · Confectionery</div>
+        <div class="pc-name">Premium Rigid Boxes</div>
+        <div class="pc-desc">Two-piece lid-and-base rigid construction. Full-surface CMYK print, metallic inks available. Matte, gloss or soft-touch finish. The standard for premium bakeries, chocolate brands and gifting.</div>
+        <div class="pc-tags">
+          <span class="ptag" style="background:#FDF3E5;color:#8B5E0A">Rigid · Lid+Base</span>
+          <span class="ptag" style="background:#FDF3E5;color:#8B5E0A">Matte/Gloss/Soft-Touch</span>
+          <span class="ptag" style="background:#F0F9F0;color:#1B4332">Eco Paper</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div class="pc-vis" style="background:linear-gradient(135deg,#FEF3E6,#FADDBB)">
+        <div style="width:110px;height:55px;background:linear-gradient(160deg,#D4A55A,#B8832A);border-radius:3px;box-shadow:0 8px 20px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.1)"><span style="font-size:1.8rem">📦</span></div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-cat" style="color:#C06018">QSR · Delivery · E-commerce</div>
+        <div class="pc-name">Corrugated Delivery Boxes</div>
+        <div class="pc-desc">Custom-printed kraft corrugated boxes — 3-ply to 7-ply. Food-grade, grease-resistant options. For cloud kitchens, pizza brands, e-commerce shipments and industrial transit.</div>
+        <div class="pc-tags">
+          <span class="ptag" style="background:#FEF0EE;color:#C06018">3-ply · 5-ply · 7-ply</span>
+          <span class="ptag" style="background:#FEF0EE;color:#C06018">Food Grade</span>
+          <span class="ptag" style="background:#F0F9F0;color:#1B4332">Recyclable</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div class="pc-vis" style="background:linear-gradient(135deg,#FEF0F0,#FAD5D5)">
+        <div style="width:85px;height:80px;background:linear-gradient(135deg,#FAD0C0,#F0A090);border-radius:4px;box-shadow:0 8px 20px rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center"><span style="font-size:1.8rem">🍬</span></div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-cat" style="color:#A02820">Sweet Shops · Festival · Mithai</div>
+        <div class="pc-name">Sweet & Festival Boxes</div>
+        <div class="pc-desc">Seasonal and year-round boxes for mithai, laddoo, barfi, chocolates. Diwali, Eid, Ugadi, Christmas — high-volume festival runs with quick turnaround. Insert tray options available.</div>
+        <div class="pc-tags">
+          <span class="ptag" style="background:#FEF0EE;color:#A02820">Festival Runs</span>
+          <span class="ptag" style="background:#FEF0EE;color:#A02820">Insert Trays</span>
+          <span class="ptag" style="background:#F0F9F0;color:#1B4332">Bulk Orders</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div class="pc-vis" style="background:linear-gradient(135deg,#EFF9F0,#C8EDD0)">
+        <div style="width:95px;height:80px;background:linear-gradient(135deg,#C0DCC8,#90C0A0);border-radius:4px;box-shadow:0 8px 20px rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center"><span style="font-size:1.8rem">🎁</span></div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-cat" style="color:#1B4332">Corporate · Events · Premium Gifting</div>
+        <div class="pc-name">Multi-Layer Gift Boxes</div>
+        <div class="pc-desc">Premium rigid multi-compartment gift boxes with magnetic closures, ribbon pulls and insert systems. Trusted for corporate gifting, delegate kits and luxury retail. Art of Living standard.</div>
+        <div class="pc-tags">
+          <span class="ptag" style="background:#EFF9F0;color:#1B4332">Multi-Layer</span>
+          <span class="ptag" style="background:#EFF9F0;color:#1B4332">Magnetic Closure</span>
+          <span class="ptag" style="background:#EFF9F0;color:#1B4332">Ribbon Pull</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div class="pc-vis" style="background:linear-gradient(135deg,#EFF4FF,#C9D9F7)">
+        <div style="width:110px;height:50px;background:linear-gradient(135deg,#B8CCF0,#90B0E8);border-radius:3px;box-shadow:0 8px 20px rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center"><span style="font-size:1.8rem">🍱</span></div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-cat" style="color:#1A5276">Pharma · Food · FMCG · Mono Cartons</div>
+        <div class="pc-name">Folding Cartons & Mono Boxes</div>
+        <div class="pc-desc">Lightweight printed folding cartons for FMCG products, medicines, spice packets, tea boxes, snack packaging. High-volume production at competitive rates. Shelf-ready options.</div>
+        <div class="pc-tags">
+          <span class="ptag" style="background:#EFF4FF;color:#1A5276">High Volume</span>
+          <span class="ptag" style="background:#EFF4FF;color:#1A5276">Shelf-Ready</span>
+          <span class="ptag" style="background:#EFF4FF;color:#1A5276">Pharma Grade</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div class="pc-vis" style="background:linear-gradient(135deg,#F5F0FA,#DDD0F0)">
+        <div style="width:65px;height:90px;background:linear-gradient(135deg,#C8B0E8,#A890D0);border-radius:3px 3px 0 0;box-shadow:0 8px 20px rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;position:relative">
+          <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:22px;height:14px;border:3px solid rgba(100,60,160,0.6);border-bottom:none;border-radius:10px 10px 0 0"></div>
+          <span style="font-size:1.4rem">🛍️</span>
+        </div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-cat" style="color:#5A2A8A">Retail · Boutique · Gifting · Export</div>
+        <div class="pc-name">Custom Paper Carry Bags</div>
+        <div class="pc-desc">Branded paper carry bags with rope, flat-ribbon or twisted handles. For retail boutiques, jewellers, clothing brands, wedding favours and export packaging. Every bag a brand statement.</div>
+        <div class="pc-tags">
+          <span class="ptag" style="background:#F5F0FA;color:#5A2A8A">Rope Handle</span>
+          <span class="ptag" style="background:#F5F0FA;color:#5A2A8A">Ribbon Handle</span>
+          <span class="ptag" style="background:#F0F9F0;color:#1B4332">100% Eco</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="sl" style="color:var(--k3)">Every Industry, Every Box</div>
+  <h2 class="sh" style="color:#fff">12 Industries.<br><em>One Manufacturing Partner.</em></h2>
+  <p class="ss">Paper boxes are required in every sector of the economy — from the food on your plate to the medicine in your cabinet to the mango exported from Karnataka. AKC Craftbox serves them all.</p>
+
+  <div class="ind-tabs">
+    <button class="ind-tab active" onclick="showTab('food',this)">🍽️ Food & Beverage</button>
+    <button class="ind-tab" onclick="showTab('health',this)">💊 Healthcare & Pharma</button>
+    <button class="ind-tab" onclick="showTab('tech',this)">📱 Electronics & Hardware</button>
+    <button class="ind-tab" onclick="showTab('agri',this)">🌾 Agriculture & Export</button>
+    <button class="ind-tab" onclick="showTab('beauty',this)">💄 Beauty & Personal Care</button>
+    <button class="ind-tab" onclick="showTab('ecom',this)">📦 E-commerce & D2C</button>
+    <button class="ind-tab" onclick="showTab('gift',this)">🎁 Gifting & Premium</button>
+    <button class="ind-tab" onclick="showTab('industry',this)">🏭 Industrial & Auto</button>
+  </div>
+
+  <!-- FOOD -->
+  <div class="ind-panel cat-food active" id="tab-food">
+    <div class="ind-grid fi">
+      <div class="ic"><div class="ic-icon">🥐</div><div class="ic-name">Bakeries & Patisseries</div><div class="ic-desc">Premium two-piece rigid boxes for croissants, cakes, macarons, pastries. Lid-base design makes every purchase feel like a gift.</div><div class="ic-box-type">Box type: <strong>Premium Rigid · Lid+Base</strong></div></div>
+      <div class="ic"><div class="ic-icon">🍕</div><div class="ic-name">Pizza & QSR Brands</div><div class="ic-desc">Corrugated pizza boxes in all standard sizes. Custom printed with your brand. Grease-resistant liner available. Swiggy/Zomato delivery-ready.</div><div class="ic-box-type">Box type: <strong>Corrugated · Food Grade</strong></div></div>
+      <div class="ic"><div class="ic-icon">🍱</div><div class="ic-name">Cloud Kitchens</div><div class="ic-desc">Lightweight branded mailer boxes for meal delivery. Daily recurring orders. The Eating Love-style kraft box for any food brand on a delivery platform.</div><div class="ic-box-type">Box type: <strong>Kraft Mailer · Custom Print</strong></div></div>
+      <div class="ic"><div class="ic-icon">🍬</div><div class="ic-name">Sweet Shops & Mithai</div><div class="ic-desc">Traditional sweet boxes, festival packaging, premium mithai boxes. High-volume Diwali/Ugadi runs. Insert tray options for mixed mithai assortments.</div><div class="ic-box-type">Box type: <strong>Folding Carton · Rigid · Insert Tray</strong></div></div>
+      <div class="ic"><div class="ic-icon">🍫</div><div class="ic-name">Chocolate & Confectionery</div><div class="ic-desc">Luxury chocolate box packaging with compartment inserts. Truffle boxes, assorted chocolate boxes, bar packaging. Food-safe inner coating.</div><div class="ic-box-type">Box type: <strong>Rigid · Multi-compartment</strong></div></div>
+      <div class="ic"><div class="ic-icon">🍵</div><div class="ic-name">Tea, Coffee & Spice Brands</div><div class="ic-desc">Folding carton boxes for tea pouches, coffee packets, spice brands. Shelf-ready design, moisture-resistant coating. FMCG retail packaging.</div><div class="ic-box-type">Box type: <strong>Folding Carton · Mono Box</strong></div></div>
+      <div class="ic"><div class="ic-icon">🥛</div><div class="ic-name">Dairy & Packaged Foods</div><div class="ic-desc">Outer cartons for packaged dairy, processed foods, snack brands, dry fruits. Corrugated outer shipping boxes and branded retail inner boxes.</div><div class="ic-box-type">Box type: <strong>Corrugated Outer · Retail Carton</strong></div></div>
+      <div class="ic"><div class="ic-icon">🥗</div><div class="ic-name">Health Food & Nutraceuticals</div><div class="ic-desc">Premium packaging for healthy snacks, protein bars, organic products, ayurvedic food supplements. Clean, eco-conscious design matches the product ethos.</div><div class="ic-box-type">Box type: <strong>Folding Carton · Eco Kraft</strong></div></div>
+    </div>
+    <div style="background:rgba(200,138,42,0.08);border:1px solid rgba(200,138,42,0.15);border-radius:6px;padding:18px 24px;margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.5)">
+      ✦ Food & Beverage accounts for <strong style="color:var(--k3)">45.1% of India's paper packaging market</strong> — the single largest segment. Every food business you see on Swiggy, Zomato, or a supermarket shelf needs a paper box.
+    </div>
+  </div>
+
+  <!-- HEALTH -->
+  <div class="ind-panel cat-health" id="tab-health">
+    <div class="ind-grid fi">
+      <div class="ic"><div class="ic-icon">💊</div><div class="ic-name">Pharmaceutical Companies</div><div class="ic-desc">Medicine mono cartons, tablet/capsule folding boxes, strip packaging outer cartons. GMP-compliant paper packaging. Every medicine strip box you see is a paper carton.</div><div class="ic-box-type">Box type: <strong>Mono Carton · Folding Carton</strong></div></div>
+      <div class="ic"><div class="ic-icon">🌿</div><div class="ic-name">Ayurvedic & Herbal Brands</div><div class="ic-desc">Eco-kraft packaging for ayurvedic supplements, herbal products, natural remedies. The paper material aligns with the brand story. Karnataka has a major ayurvedic cluster.</div><div class="ic-box-type">Box type: <strong>Eco Kraft Carton</strong></div></div>
+      <div class="ic"><div class="ic-icon">🏥</div><div class="ic-name">Hospitals & Diagnostic Centres</div><div class="ic-desc">Hospital gift kits, patient discharge boxes, diagnostic sample kits, medical device packaging. Clean, tamper-evident paper packaging for healthcare environments.</div><div class="ic-box-type">Box type: <strong>Tamper-evident · Clean Carton</strong></div></div>
+      <div class="ic"><div class="ic-icon">💪</div><div class="ic-name">Supplements & Nutraceuticals</div><div class="ic-desc">Premium packaging for protein powders, vitamin supplements, health drinks. Bangalore's health-conscious consumer market is a major demand driver.</div><div class="ic-box-type">Box type: <strong>Folding Carton · Premium Rigid</strong></div></div>
+    </div>
+    <div style="background:rgba(200,138,42,0.08);border:1px solid rgba(200,138,42,0.15);border-radius:6px;padding:18px 24px;margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.5)">
+      ✦ India's pharmaceutical sector is the <strong style="color:var(--k3)">"pharmacy of the world"</strong> — every medicine packet, every strip box, every hospital kit uses paper carton packaging. Karnataka is one of the top pharma-producing states.
+    </div>
+  </div>
+
+  <!-- TECH -->
+  <div class="ind-panel cat-tech" id="tab-tech">
+    <div class="ind-grid fi">
+      <div class="ic"><div class="ic-icon">📱</div><div class="ic-name">Mobile & Accessories</div><div class="ic-desc">Retail packaging boxes for mobile phones, chargers, earphones, covers, power banks. The sleek box your phone comes in is a paper rigid box. Every accessory brand needs these.</div><div class="ic-box-type">Box type: <strong>Rigid Box · Retail Pack</strong></div></div>
+      <div class="ic"><div class="ic-icon">💡</div><div class="ic-name">LED & Lighting</div><div class="ic-desc">Corrugated outer cartons and folding carton retail boxes for LED bulbs, tube lights, panel lights, decorative lighting. Bangalore has hundreds of LED manufacturers.</div><div class="ic-box-type">Box type: <strong>Corrugated · Folding Carton</strong></div></div>
+      <div class="ic"><div class="ic-icon">🔌</div><div class="ic-name">Electrical Components</div><div class="ic-desc">Corrugated transit boxes for switches, sockets, cables, wiring accessories. Protective packaging for small electrical parts from manufacturers to distributors.</div><div class="ic-box-type">Box type: <strong>Corrugated Shipping</strong></div></div>
+      <div class="ic"><div class="ic-icon">🖥️</div><div class="ic-name">Consumer Electronics</div><div class="ic-desc">Outer shipping cartons for televisions, air conditioners, refrigerators, washing machines. Heavy-duty 5-ply and 7-ply corrugated for large appliance transport.</div><div class="ic-box-type">Box type: <strong>Heavy-duty Corrugated 5-7 ply</strong></div></div>
+    </div>
+    <div style="background:rgba(200,138,42,0.08);border:1px solid rgba(200,138,42,0.15);border-radius:6px;padding:18px 24px;margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.5)">
+      ✦ Every refrigerator, air conditioner, phone and LED bulb you buy comes in a paper box. Electronics & Hardware is the <strong style="color:var(--k3)">second largest end-user</strong> of paper packaging in India.
+    </div>
+  </div>
+
+  <!-- AGRI -->
+  <div class="ind-panel cat-agri" id="tab-agri">
+    <div class="ind-grid fi">
+      <div class="ic"><div class="ic-icon">🥭</div><div class="ic-name">Mango & Tropical Fruit Export</div><div class="ic-desc">Karnataka is India's top mango producer. Premium Alphonso, Badami, Totapuri mangoes are exported in custom paper cartons to the Middle East, Europe and USA.</div><div class="ic-box-type">Box type: <strong>Corrugated Produce Box · Export Grade</strong></div></div>
+      <div class="ic"><div class="ic-icon">🍇</div><div class="ic-name">Grapes & Berry Exports</div><div class="ic-desc">Ventilated paper punnets and cartons for fresh grapes, strawberries, blueberries. Food-safe, moisture-resistant options for cold chain export packaging.</div><div class="ic-box-type">Box type: <strong>Ventilated Produce Carton</strong></div></div>
+      <div class="ic"><div class="ic-icon">🌸</div><div class="ic-name">Floriculture & Nurseries</div><div class="ic-desc">Karnataka is a major flower exporter. Paper-based flower boxes for roses, gerberas, carnations. Export-compliant packaging for air freight to international markets.</div><div class="ic-box-type">Box type: <strong>Flower Carton · Export</strong></div></div>
+      <div class="ic"><div class="ic-icon">🌾</div><div class="ic-name">Spices & Agricultural Products</div><div class="ic-desc">Corrugated master cartons for packaged spices, pulses, dry goods. Karnataka produces some of India's finest coffee, spices and organic produce — all needing export boxes.</div><div class="ic-box-type">Box type: <strong>Master Carton · Transit Box</strong></div></div>
+    </div>
+    <div style="background:rgba(200,138,42,0.08);border:1px solid rgba(200,138,42,0.15);border-radius:6px;padding:18px 24px;margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.5)">
+      ✦ India's agriculture & fisheries exports are <strong style="color:var(--k3)">USD 52.58 billion annually</strong> — every single shipment requires export-grade paper packaging. Karnataka is a top contributor.
+    </div>
+  </div>
+
+  <!-- BEAUTY -->
+  <div class="ind-panel cat-beauty" id="tab-beauty">
+    <div class="ind-grid fi">
+      <div class="ic"><div class="ic-icon">💄</div><div class="ic-name">Cosmetics & Makeup</div><div class="ic-desc">Premium rigid boxes for lipsticks, foundations, eyeshadow palettes. Folding cartons for mass-market makeup brands. Spot UV, foil, embossing available.</div><div class="ic-box-type">Box type: <strong>Rigid Luxury · Folding Carton</strong></div></div>
+      <div class="ic"><div class="ic-icon">🧴</div><div class="ic-name">Skincare & Serums</div><div class="ic-desc">Premium folding carton boxes for face creams, serums, moisturizers. Clean, minimal eco-packaging for D2C skincare brands growing on Instagram.</div><div class="ic-box-type">Box type: <strong>Eco Carton · Premium Folding</strong></div></div>
+      <div class="ic"><div class="ic-icon">🌹</div><div class="ic-name">Perfumes & Fragrances</div><div class="ic-desc">Luxury rigid boxes for perfume bottles. Soft-touch lamination, gold foil stamping, magnetic closure. Premium unboxing experience for fragrance brands.</div><div class="ic-box-type">Box type: <strong>Premium Rigid · Foil Finish</strong></div></div>
+      <div class="ic"><div class="ic-icon">🧼</div><div class="ic-name">Soaps & Personal Care</div><div class="ic-desc">Eco-kraft folding cartons for artisan soaps, shampoo bars, bath products. Bangalore's artisan personal care market is rapidly growing.</div><div class="ic-box-type">Box type: <strong>Eco Kraft · Folding Carton</strong></div></div>
+    </div>
+    <div style="background:rgba(200,138,42,0.08);border:1px solid rgba(200,138,42,0.15);border-radius:6px;padding:18px 24px;margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.5)">
+      ✦ Personal care & cosmetics packaging is one of the <strong style="color:var(--k3)">fastest-growing segments</strong> in paper packaging — driven by India's D2C beauty explosion and increasing sustainability mandates.
+    </div>
+  </div>
+
+  <!-- ECOM -->
+  <div class="ind-panel cat-ecom" id="tab-ecom">
+    <div class="ind-grid fi">
+      <div class="ic"><div class="ic-icon">📦</div><div class="ic-name">Amazon & Flipkart Sellers</div><div class="ic-desc">Custom-branded mailer boxes for online sellers. Amazon prep-ready boxes, Flipkart-compliant packaging. Brand your shipment from warehouse to customer doorstep.</div><div class="ic-box-type">Box type: <strong>Corrugated Mailer · Custom Print</strong></div></div>
+      <div class="ic"><div class="ic-icon">🛍️</div><div class="ic-name">D2C Subscription Brands</div><div class="ic-desc">Monthly subscription boxes for beauty, food, wellness, stationery. The unboxing experience IS the brand for D2C companies. AKC makes boxes that get photographed and posted.</div><div class="ic-box-type">Box type: <strong>Subscription Box · Rigid + Mailer</strong></div></div>
+      <div class="ic"><div class="ic-icon">👗</div><div class="ic-name">Fashion & Apparel Brands</div><div class="ic-desc">Branded folding boxes and carry bags for clothing, footwear, accessories. Online fashion brands need premium packaging that matches their brand positioning.</div><div class="ic-box-type">Box type: <strong>Apparel Box · Carry Bag</strong></div></div>
+      <div class="ic"><div class="ic-icon">🔄</div><div class="ic-name">Quick Commerce (Q-commerce)</div><div class="ic-desc">Lightweight paper bags and boxes for Blinkit, Zepto, Swiggy Instamart. Micro-format packaging for hyper-local 10-minute delivery. Branded at every doorstep.</div><div class="ic-box-type">Box type: <strong>Micro-format · Lightweight</strong></div></div>
+    </div>
+    <div style="background:rgba(200,138,42,0.08);border:1px solid rgba(200,138,42,0.15);border-radius:6px;padding:18px 24px;margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.5)">
+      ✦ India processed <strong style="color:var(--k3)">5.2 billion e-commerce shipments in 2024</strong>, growing 35%+ per year. Every single package requires a box. E-commerce is the fastest-growing demand driver for custom paper packaging.
+    </div>
+  </div>
+
+  <!-- GIFT -->
+  <div class="ind-panel cat-gift" id="tab-gift">
+    <div class="ind-grid fi">
+      <div class="ic"><div class="ic-icon">🎁</div><div class="ic-name">Corporate Gifting</div><div class="ic-desc">Multi-layer rigid gift boxes for Diwali, New Year, onboarding kits. Bangalore's 5,000+ IT companies spend crores on corporate gifts every year. Premium is the expectation.</div><div class="ic-box-type">Box type: <strong>Multi-layer Rigid · Insert System</strong></div></div>
+      <div class="ic"><div class="ic-icon">💍</div><div class="ic-name">Jewellery Brands</div><div class="ic-desc">Premium rigid boxes for rings, necklaces, bangles. Foam-insert lining, velvet finish options, magnetic closure. Jewellery packaging is the brand's silent salesperson.</div><div class="ic-box-type">Box type: <strong>Premium Rigid · Foam Insert</strong></div></div>
+      <div class="ic"><div class="ic-icon">💒</div><div class="ic-name">Weddings & Events</div><div class="ic-desc">Return gift boxes, wedding sweet packaging, favour boxes, mehndi/haldi kits. Bangalore's wedding industry is one of India's largest — premium packaging is essential.</div><div class="ic-box-type">Box type: <strong>Premium Rigid · Custom Print</strong></div></div>
+      <div class="ic"><div class="ic-icon">🏛️</div><div class="ic-name">Luxury Retail & Boutiques</div><div class="ic-desc">High-end carry bags and boxes for luxury boutiques, designer stores, gourmet shops. Soft-touch lamination, gold foil, ribbon handles. Packaging that commands attention.</div><div class="ic-box-type">Box type: <strong>Luxury Rigid · Rope Bag</strong></div></div>
+    </div>
+    <div style="background:rgba(200,138,42,0.08);border:1px solid rgba(200,138,42,0.15);border-radius:6px;padding:18px 24px;margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.5)">
+      ✦ Corporate gifting in India is a ₹25,000+ crore market growing at 22% annually. <strong style="color:var(--k3)">Bangalore alone accounts for 15%</strong> of corporate gifting spend — driven by the IT and startup ecosystem.
+    </div>
+  </div>
+
+  <!-- INDUSTRY -->
+  <div class="ind-panel cat-industry" id="tab-industry">
+    <div class="ind-grid fi">
+      <div class="ic"><div class="ic-icon">🚗</div><div class="ic-name">Automotive & Auto Parts</div><div class="ic-desc">Heavy-duty corrugated boxes for auto parts, spare parts, components. From small bearings to large body panels — each needs correct-spec paper packaging for safe transit.</div><div class="ic-box-type">Box type: <strong>Heavy Corrugated · Custom Spec</strong></div></div>
+      <div class="ic"><div class="ic-icon">🔧</div><div class="ic-name">Hardware & Tools</div><div class="ic-desc">Corrugated packaging for hand tools, power tools, hardware kits. Retail display boxes for tools sold in hardware stores. Bangalore has a large hardware distribution market.</div><div class="ic-box-type">Box type: <strong>Corrugated · Retail Display</strong></div></div>
+      <div class="ic"><div class="ic-icon">👕</div><div class="ic-name">Textiles & Apparel Manufacturing</div><div class="ic-desc">Transit boxes for garment exports, fabric rolls, finished clothing. Karnataka is a major garment export hub — millions of boxes are needed for textile shipping.</div><div class="ic-box-type">Box type: <strong>Export Corrugated · Master Carton</strong></div></div>
+      <div class="ic"><div class="ic-icon">🏗️</div><div class="ic-name">Construction & Home Products</div><div class="ic-desc">Packaging for tiles, sanitaryware, plumbing accessories, fittings, hardware. Corrugated boxes for heavy products needing protection during logistics and retail display.</div><div class="ic-box-type">Box type: <strong>Heavy Corrugated · Retail Carton</strong></div></div>
+    </div>
+    <div style="background:rgba(200,138,42,0.08);border:1px solid rgba(200,138,42,0.15);border-radius:6px;padding:18px 24px;margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.5)">
+      ✦ Industrial and automotive packaging is one of the most <strong style="color:var(--k3)">volume-intensive segments</strong> — auto parts manufacturers place recurring large orders monthly. Karnataka's Peenya industrial area alone represents a massive local opportunity.
+    </div>
+  </div>
+
+  <div class="ind-summary fi">
+    <div class="is-card"><span class="is-n">8</span><div class="is-l">Industry Categories Served</div></div>
+    <div class="is-card"><span class="is-n">40+</span><div class="is-l">Sub-segments Covered</div></div>
+    <div class="is-card"><span class="is-n">₹1.58L Cr</span><div class="is-l">India Paper Packaging Market 2025</div></div>
+    <div class="is-card"><span class="is-n">19.48%</span><div class="is-l">Annual Market Growth Rate</div></div>
+  </div>
+</section>
+
+<!-- MARKET -->
+<section class="market" id="market">
+  <div class="mkt-grid fi">
+    <div class="mkt-left">
+      <div class="sl" style="color:var(--k3)">Why Now · Why Bangalore</div>
+      <h2 class="sh">A Market Growing Faster Than Any Other in South India</h2>
+      <p class="ss">Three unstoppable forces are driving paper packaging demand in Bangalore. Every business that uses plastic packaging must switch. Every new cloud kitchen, every D2C brand, every export shipment needs a paper box.</p>
+      <div class="mkt-facts">
+        <div class="mf"><span class="mf-num">₹1.58L Cr</span><span class="mf-text">India paper packaging market size in 2025 — 5th largest sector in the Indian economy</span></div>
+        <div class="mf"><span class="mf-num">₹3.84L Cr</span><span class="mf-text">Projected market size by 2030 — nearly 2.5x growth in just 5 years</span></div>
+        <div class="mf"><span class="mf-num">85%</span><span class="mf-text">Of India's 22,000+ packaging units are SMEs — Bangalore's local players have a massive advantage</span></div>
+        <div class="mf"><span class="mf-num">100%</span><span class="mf-text">FDI permitted in paper packaging — India is a global investment magnet for the sector</span></div>
+      </div>
+    </div>
+    <div class="mkt-right">
+      <div class="bars-title">Industry Demand Share — India Paper Packaging 2025</div>
+      <div class="bar-item"><div class="bar-header"><span class="bar-label">Food & Beverage</span><span class="bar-pct">45.1%</span></div><div class="bar-track"><div class="bar-fill" style="--w:90%"></div></div></div>
+      <div class="bar-item"><div class="bar-header"><span class="bar-label">E-commerce & Retail</span><span class="bar-pct">18.3%</span></div><div class="bar-track"><div class="bar-fill" style="--w:36%"></div></div></div>
+      <div class="bar-item"><div class="bar-header"><span class="bar-label">Healthcare & Pharma</span><span class="bar-pct">12.7%</span></div><div class="bar-track"><div class="bar-fill" style="--w:25%"></div></div></div>
+      <div class="bar-item"><div class="bar-header"><span class="bar-label">Electronics & Hardware</span><span class="bar-pct">10.2%</span></div><div class="bar-track"><div class="bar-fill" style="--w:20%"></div></div></div>
+      <div class="bar-item"><div class="bar-header"><span class="bar-label">Personal Care & Cosmetics</span><span class="bar-pct">7.4%</span></div><div class="bar-track"><div class="bar-fill" style="--w:15%"></div></div></div>
+      <div class="bar-item"><div class="bar-header"><span class="bar-label">Agriculture & Exports</span><span class="bar-pct">6.3%</span></div><div class="bar-track"><div class="bar-fill" style="--w:12%"></div></div></div>
+
+      <div class="mkt-blr">
+        <div class="blr-card"><div class="blr-n">4,000+</div><div class="blr-l">Cloud kitchens in Bangalore</div></div>
+        <div class="blr-card"><div class="blr-n">800+</div><div class="blr-l">Bakeries & patisseries</div></div>
+        <div class="blr-card"><div class="blr-n">5,000+</div><div class="blr-l">IT companies (corporate gifting)</div></div>
+        <div class="blr-card"><div class="blr-n">1,200+</div><div class="blr-l">Sweet shops & mithai brands</div></div>
+        <div class="blr-card"><div class="blr-n">500+</div><div class="blr-l">Pharma & wellness companies</div></div>
+        <div class="blr-card"><div class="blr-n">2,000+</div><div class="blr-l">D2C & e-commerce sellers</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCALE -->
+<section class="scale" id="scale">
+  <div class="sl">Growth Strategy</div>
+  <h2 class="sh">We Scale With You —<br><em>From Bangalore</em> to the World</h2>
+  <p class="ss">AKC Craftbox isn't just a local supplier. Our manufacturing capability and distribution strategy is built to grow with your business — from your first 50-box order to pan-India and export-scale volumes.</p>
+  <div class="scale-grid fi">
+    <div class="sg sg-local">
+      <div class="sg-phase" style="color:var(--k2)">Phase 1 — Immediate</div>
+      <div class="sg-title">Bangalore & Karnataka</div>
+      <div class="sg-desc">Our home ground. We already know the bakeries, the cloud kitchens, the sweet shops. Fast delivery, quick sample turnaround, personal service.</div>
+      <div class="sg-targets">
+        <span class="sg-t">Food & Beverage sector — highest priority</span>
+        <span class="sg-t">Gifting & premium brands</span>
+        <span class="sg-t">Peenya industrial cluster</span>
+        <span class="sg-t">Koramangala / Indiranagar cloud kitchen belt</span>
+        <span class="sg-t">BTM / Jayanagar sweet shop corridor</span>
+      </div>
+      <div class="sg-metric">10,000+ <div class="sg-metric-l">potential clients in Bangalore alone</div></div>
+    </div>
+    <div class="sg sg-south">
+      <div class="sg-phase" style="color:var(--g3)">Phase 2 — 6 to 12 Months</div>
+      <div class="sg-title">South India Market</div>
+      <div class="sg-desc">Tamil Nadu, Andhra Pradesh, Telangana, Kerala. Each state has its own massive food, pharma, and industrial packaging demand. Same product, wider geography.</div>
+      <div class="sg-targets">
+        <span class="sg-t">Chennai manufacturing & FMCG cluster</span>
+        <span class="sg-t">Hyderabad pharma corridor (Genome Valley)</span>
+        <span class="sg-t">Coimbatore textile & manufacturing belt</span>
+        <span class="sg-t">Kerala coconut & agricultural export packaging</span>
+        <span class="sg-t">Vizag port — export packaging</span>
+      </div>
+      <div class="sg-metric">50,000+ <div class="sg-metric-l">addressable businesses in South India</div></div>
+    </div>
+    <div class="sg sg-national">
+      <div class="sg-phase" style="color:#2A80C8">Phase 3 — 12+ Months</div>
+      <div class="sg-title">Pan-India & Export</div>
+      <div class="sg-desc">IndiaMart B2B, export buyers from Middle East, SE Asia and Europe. India's paper packaging cost advantage is 40% lower than European alternatives.</div>
+      <div class="sg-targets">
+        <span class="sg-t">IndiaMart B2B premium listing — pan-India reach</span>
+        <span class="sg-t">UAE, Saudi Arabia — Indian diaspora gifting demand</span>
+        <span class="sg-t">SE Asia — eco-packaging demand growing fast</span>
+        <span class="sg-t">Europe — sustainability regulations driving import</span>
+        <span class="sg-t">Agri & floriculture export packaging — airport freight</span>
+      </div>
+      <div class="sg-metric">$46B+ <div class="sg-metric-l">India paper packaging market size by 2030</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE REACH CLIENTS -->
+<section class="reach" id="reach">
+  <div class="reach-grid fi">
+    <div>
+      <div class="sl">How We Find Clients</div>
+      <h2 class="sh">Every Channel, Pointing to <em>Your Box</em></h2>
+      <p class="ss">AKC Craftbox uses a multi-channel approach to reach decision-makers in every industry — from Instagram-browsing bakery owners to LinkedIn procurement heads at Bangalore's tech companies.</p>
+      <div class="reach-channels">
+        <div class="rch">
+          <div class="rch-icon" style="background:rgba(220,68,55,0.1)">🔍</div>
+          <div><div class="rch-name">Google Search</div><div class="rch-reach">Buyers searching "custom box manufacturer Bangalore", "paper packaging supplier" — highest purchase intent</div></div>
+          <div class="rch-badge" style="background:#FEF0EE;color:#A02820">HIGH INTENT</div>
+        </div>
+        <div class="rch">
+          <div class="rch-icon" style="background:rgba(193,53,132,0.1)">📸</div>
+          <div><div class="rch-name">Instagram & Meta Ads</div><div class="rch-reach">Bakery owners, food entrepreneurs, D2C founders, wedding planners — visual discovery channel</div></div>
+          <div class="rch-badge" style="background:#F5F0FA;color:#5A2A8A">DISCOVERY</div>
+        </div>
+        <div class="rch">
+          <div class="rch-icon" style="background:rgba(0,119,181,0.1)">💼</div>
+          <div><div class="rch-name">LinkedIn B2B Outreach</div><div class="rch-reach">Procurement managers, supply chain heads, startup founders, HR gifting budgets at IT companies</div></div>
+          <div class="rch-badge" style="background:#EFF4FF;color:#1A5276">B2B DIRECT</div>
+        </div>
+        <div class="rch">
+          <div class="rch-icon" style="background:rgba(37,211,102,0.1)">💬</div>
+          <div><div class="rch-name">WhatsApp Business</div><div class="rch-reach">Direct conversation with buyers — catalogue, quick quotes, sample requests. Where Indian B2B deals close</div></div>
+          <div class="rch-badge" style="background:#EFF9F0;color:#1B4332">CONVERSION</div>
+        </div>
+        <div class="rch">
+          <div class="rch-icon" style="background:rgba(200,138,42,0.1)">🏭</div>
+          <div><div class="rch-name">IndiaMart B2B</div><div class="rch-reach">Pan-India B2B buyers and international export inquiries — Middle East, SE Asia, Europe</div></div>
+          <div class="rch-badge" style="background:#FDF3E5;color:#8B5E0A">SCALE</div>
+        </div>
+      </div>
+    </div>
+    <div class="reach-strategy">
+      <div class="rs-card" style="background:#FDF3E5;border-left-color:var(--k2)">
+        <div class="rs-title">🎯 The Sample Kit Strategy</div>
+        <div class="rs-desc">Every month, a physical sample box is dispatched to 20 hand-picked target clients. Nothing closes a packaging deal faster than letting the buyer touch and feel the product quality. One premium box, perfectly finished, turns a cold lead into a committed client.</div>
+      </div>
+      <div class="rs-card" style="background:#EFF9F0;border-left-color:var(--g3)">
+        <div class="rs-title">📍 Local Networking Communities</div>
+        <div class="rs-desc">Bangalore's business networking groups — vyapara vedikes, industry associations, MSME forums — are where the city's business owners meet and trust each other. AKC Craftbox actively participates and builds relationships where decisions happen organically.</div>
+      </div>
+      <div class="rs-card" style="background:#EFF4FF;border-left-color:#1A5276">
+        <div class="rs-title">🤝 Referral-First Growth</div>
+        <div class="rs-desc">One satisfied client refers three more. Art of Living trusted us — that credibility opens doors at every spiritual, wellness and events organization in Bangalore. Nagarjuna trusted us — that reference opens every restaurant chain conversation we start.</div>
+      </div>
+      <div class="rs-card" style="background:#F5F0FA;border-left-color:var(--pp)">
+        <div class="rs-title">🖨️ Printing Press Partnerships</div>
+        <div class="rs-desc">Bangalore has hundreds of printing presses whose clients need boxes. By partnering with print studios and design agencies, AKC Craftbox gets referrals from designers who are already talking to brands that need packaging.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="sl" style="color:var(--k3)">How It Works</div>
+  <h2 class="sh">Your Box, Delivered in <em>4 Steps</em></h2>
+  <p class="ss">No complex process. No design agency needed (unless you want one). Tell us what you need — we handle the rest from our Gottigere plant in Bangalore.</p>
+  <div class="proc-steps fi">
+    <div class="ps">
+      <div class="ps-num">01</div>
+      <div class="ps-icon">📐</div>
+      <div class="ps-title">Share Your Requirement</div>
+      <div class="ps-desc">WhatsApp, call or fill the form. Tell us: product type, size, quantity, any design. We respond within 2 hours.</div>
+    </div>
+    <div class="ps">
+      <div class="ps-num">02</div>
+      <div class="ps-icon">🎨</div>
+      <div class="ps-title">Design & Mockup</div>
+      <div class="ps-desc">Digital mockup of your box with your logo and colours. 2 free revisions. Approve when you're happy.</div>
+    </div>
+    <div class="ps">
+      <div class="ps-num">03</div>
+      <div class="ps-icon">🏭</div>
+      <div class="ps-title">Made in Bangalore</div>
+      <div class="ps-desc">Manufactured at our Gottigere plant with quality checks. Standard lead time: 5–7 days first order, faster on reorders.</div>
+    </div>
+    <div class="ps">
+      <div class="ps-num">04</div>
+      <div class="ps-icon">🚚</div>
+      <div class="ps-title">Delivered to You</div>
+      <div class="ps-desc">Doorstep delivery in Bangalore. Pan-India courier dispatch. Your spec is saved — reorders are always faster.</div>
+    </div>
+  </div>
+  <div class="custom-opts fi">
+    <div class="co"><div class="co-i">📏</div><div class="co-l">Any Size</div><div class="co-v">Passport to oversized. Custom dimensions welcome.</div></div>
+    <div class="co"><div class="co-i">🖨️</div><div class="co-l">Full Colour Print</div><div class="co-v">CMYK offset. Spot colour. Metallic inks.</div></div>
+    <div class="co"><div class="co-i">✨</div><div class="co-l">All Finishes</div><div class="co-v">Matte · Gloss · Soft-touch · Kraft natural.</div></div>
+    <div class="co"><div class="co-i">📄</div><div class="co-l">All Paper Grades</div><div class="co-v">250–400 GSM art board. Kraft. Duplex. Corrugated.</div></div>
+    <div class="co"><div class="co-i">🔢</div><div class="co-l">Any Quantity</div><div class="co-v">MOQ 50 units. Bulk from 500+. Export volumes available.</div></div>
+    <div class="co"><div class="co-i">🌿</div><div class="co-l">100% Eco</div><div class="co-v">All paper. No plastic. Fully recyclable. FSC-friendly.</div></div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof">
+  <div class="sl">Already Trusted By</div>
+  <h2 class="sh">18+ Years of Paper.<br><em>Proven at the Highest Level.</em></h2>
+  <p class="ss">AKC Craftbox is founded by Channakeshava — whose paper packaging expertise has been trusted by some of India's most respected brands. We didn't start yesterday.</p>
+  <div class="proof-row fi">
+    <div class="pr"><div class="pr-logo">🍛</div><div><div class="pr-name">Nagarjuna Restaurant</div><div class="pr-sub">Parcel boxes — thousands delivered daily</div></div></div>
+    <div class="pr-div"></div>
+    <div class="pr"><div class="pr-logo">🥤</div><div><div class="pr-name">Frozen Bottle</div><div class="pr-sub">Custom packaging for India's popular beverage brand</div></div></div>
+    <div class="pr-div"></div>
+    <div class="pr"><div class="pr-logo">🙏</div><div><div class="pr-name">Art of Living</div><div class="pr-sub">Premium delegate gift boxes — PM-level events</div></div></div>
+    <div class="pr-div"></div>
+    <div class="pr"><div class="pr-logo">✨</div><div><div class="pr-name">Anthara Bakery</div><div class="pr-sub">Premium two-piece rigid boxes for a French-American patisserie</div></div></div>
+  </div>
+  <div class="proof-banner fi">
+    <div class="pb-text">
+      From a <em>neighbourhood sweet shop</em> to a <em>Prime Minister's event</em> — every box we make carries a brand story.
+    </div>
+    <div class="pb-stats">
+      <div class="pbs"><div class="pbs-n">18+</div><div class="pbs-l">Years Experience</div></div>
+      <div class="pbs"><div class="pbs-n">100%</div><div class="pbs-l">Paper. Zero Plastic.</div></div>
+      <div class="pbs"><div class="pbs-n">BLR</div><div class="pbs-l">Made in Bangalore</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec" id="contact">
+  <div class="cta-sl">Start Today</div>
+  <h2 class="cta-h">Every Box Carries<br>Your Brand to a <em>Customer</em></h2>
+  <p class="cta-p">Request a free sample. Custom quote in 24 hours. Minimum order: 50 units. We serve all industries, all sizes, all across India.</p>
+  <div class="cta-form">
+    <input class="cta-in" type="text" placeholder="Business name & WhatsApp number"/>
+    <button class="cta-btn">Get a Quote</button>
+  </div>
+  <div class="cta-note">Or reach us on WhatsApp: <strong>+91 97399 91687</strong> &nbsp;·&nbsp; gottigere, Bangalore 560083</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl"><span>AKC</span> Craftbox · Bangalore</div>
+  <div class="fc">© 2026 AKC Board Croft Pvt. Ltd. · Custom Paper Packaging, Made in Bangalore</div>
+  <div class="fr">Gottigere, Bangalore — 560083<br>All paper. Zero plastic. Fully recyclable.</div>
+</footer>
+
+<script>
+// Tab switching
+function showTab(id, btn) {
+  document.querySelectorAll('.ind-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.ind-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+  // Re-trigger fi animation
+  document.querySelectorAll('#tab-' + id + ' .fi').forEach(el => {
+    el.classList.remove('vis');
+    setTimeout(() => el.classList.add('vis'), 50);
+  });
+}
+
+// Scroll reveal
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fi').forEach(el => io.observe(el));
+
+// Bar animation trigger
+const barIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.bar-fill').forEach(b => {
+        const w = b.style.getPropertyValue('--w');
+        b.style.width = w;
+      });
+      barIO.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.mkt-right').forEach(el => barIO.observe(el));
+
+// Nav active state
+const secs = document.querySelectorAll('section[id]');
+const nls = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
+  nls.forEach(a => {
+    const href = a.getAttribute('href').replace('#','');
+    a.style.color = href === cur ? 'var(--k3)' : 'rgba(255,255,255,0.45)';
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
