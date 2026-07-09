@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 <style>
 :root{
-  --g1:#0E2318;--g2:#1B3D2A;--g3:#2D6A4F;--g4:#52B788;
+  --g1:#1C1310;--g2:#3D1F1A;--g3:#8C3A46;--g4:#D97A8C;
   --k1:#7A4F08;--k2:#A8690F;--k3:#C88A2A;--k4:#E8B860;
   --cr:#FAF6ED;--cr2:#F0E8D0;--cr3:#E0D4B0;
   --wh:#FFFFFF;--dk:#080F0A;--md:#3A4A3C;--lt:#7A8C7A;
@@ -155,9 +155,9 @@ nav{
 /* Gift box */
 .scb-gift{
   width:140px;height:130px;
-  background:linear-gradient(135deg,#1A3A2A,#2A5A3A);
+  background:linear-gradient(135deg,#2A1518,#3D1F1A);
   box-shadow:0 10px 28px rgba(0,0,0,0.4);
-  border:1px solid rgba(82,183,136,0.15);
+  border:1px solid rgba(217,122,140,0.15);
 }
 .scb-gift-ribbon{width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--k3),transparent);margin-bottom:8px}
 .scb-gift-icon{font-size:1.8rem;margin-bottom:6px}
@@ -268,7 +268,6 @@ section{padding:90px 56px}
 .mf-num{font-family:'Space Mono',monospace;font-size:1.2rem;font-weight:700;color:var(--k3);min-width:90px}
 .mf-text{font-size:0.75rem;color:rgba(255,255,255,0.5);line-height:1.5}
 
-.mkt-right{}
 .bars-title{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:20px}
 .bar-item{margin-bottom:18px}
 .bar-header{display:flex;justify-content:space-between;margin-bottom:7px}
@@ -552,7 +551,7 @@ footer{background:var(--dk);padding:32px 56px;display:flex;justify-content:space
       </div>
       <div class="pc-body">
         <div class="pc-cat" style="color:#C06018">QSR · Delivery · E-commerce</div>
-        <div class="pc-name">Corrugated Delivery Boxes</div>
+        <div class="pc-name">Corrugated Packaging Boxes</div>
         <div class="pc-desc">Custom-printed kraft corrugated boxes — 3-ply to 7-ply. Food-grade, grease-resistant options. For cloud kitchens, pizza brands, e-commerce shipments and industrial transit.</div>
         <div class="pc-tags">
           <span class="ptag" style="background:#FEF0EE;color:#C06018">3-ply · 5-ply · 7-ply</span>
@@ -600,7 +599,7 @@ footer{background:var(--dk);padding:32px 56px;display:flex;justify-content:space
       </div>
       <div class="pc-body">
         <div class="pc-cat" style="color:#1A5276">Pharma · Food · FMCG · Mono Cartons</div>
-        <div class="pc-name">Folding Cartons & Mono Boxes</div>
+        <div class="pc-name">Folding Cartons & Mono Cartons</div>
         <div class="pc-desc">Lightweight printed folding cartons for FMCG products, medicines, spice packets, tea boxes, snack packaging. High-volume production at competitive rates. Shelf-ready options.</div>
         <div class="pc-tags">
           <span class="ptag" style="background:#EFF4FF;color:#1A5276">High Volume</span>
@@ -639,24 +638,28 @@ footer{background:var(--dk);padding:32px 56px;display:flex;justify-content:space
 
   <div class="ind-tabs">
     <button class="ind-tab active" onclick="showTab('food',this)">🍽️ Food & Beverage</button>
-    <button class="ind-tab" onclick="showTab('health',this)">💊 Healthcare & Pharma</button>
-    <button class="ind-tab" onclick="showTab('tech',this)">📱 Electronics & Hardware</button>
+    <button class="ind-tab" onclick="showTab('gift',this)">🎁 Gifting & Premium</button>
     <button class="ind-tab" onclick="showTab('agri',this)">🌾 Agriculture & Export</button>
     <button class="ind-tab" onclick="showTab('beauty',this)">💄 Beauty & Personal Care</button>
-    <button class="ind-tab" onclick="showTab('ecom',this)">📦 E-commerce & D2C</button>
-    <button class="ind-tab" onclick="showTab('gift',this)">🎁 Gifting & Premium</button>
     <button class="ind-tab" onclick="showTab('industry',this)">🏭 Industrial & Auto</button>
+    <button class="ind-tab" onclick="showTab('health',this)">💊 Healthcare & Pharma</button>
+    <button class="ind-tab" onclick="showTab('tech',this)">📱 Electronics & Hardware</button>
+    <button class="ind-tab" onclick="showTab('ecom',this)">📦 E-commerce & Retail</button>
   </div>
 
   <!-- FOOD -->
   <div class="ind-panel cat-food active" id="tab-food">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap">
+      <div style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Premium cafes, bakeries, cloud kitchens and packaged food brands.</div>
+      <a href="food-and-beverages.html" style="font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--k3);font-weight:600">View Food &amp; Beverage Packaging Solutions →</a>
+    </div>
     <div class="ind-grid fi">
       <div class="ic"><div class="ic-icon">🥐</div><div class="ic-name">Bakeries & Patisseries</div><div class="ic-desc">Premium two-piece rigid boxes for croissants, cakes, macarons, pastries. Lid-base design makes every purchase feel like a gift.</div><div class="ic-box-type">Box type: <strong>Premium Rigid · Lid+Base</strong></div></div>
       <div class="ic"><div class="ic-icon">🍕</div><div class="ic-name">Pizza & QSR Brands</div><div class="ic-desc">Corrugated pizza boxes in all standard sizes. Custom printed with your brand. Grease-resistant liner available. Swiggy/Zomato delivery-ready.</div><div class="ic-box-type">Box type: <strong>Corrugated · Food Grade</strong></div></div>
       <div class="ic"><div class="ic-icon">🍱</div><div class="ic-name">Cloud Kitchens</div><div class="ic-desc">Lightweight branded mailer boxes for meal delivery. Daily recurring orders. The Eating Love-style kraft box for any food brand on a delivery platform.</div><div class="ic-box-type">Box type: <strong>Kraft Mailer · Custom Print</strong></div></div>
       <div class="ic"><div class="ic-icon">🍬</div><div class="ic-name">Sweet Shops & Mithai</div><div class="ic-desc">Traditional sweet boxes, festival packaging, premium mithai boxes. High-volume Diwali/Ugadi runs. Insert tray options for mixed mithai assortments.</div><div class="ic-box-type">Box type: <strong>Folding Carton · Rigid · Insert Tray</strong></div></div>
       <div class="ic"><div class="ic-icon">🍫</div><div class="ic-name">Chocolate & Confectionery</div><div class="ic-desc">Luxury chocolate box packaging with compartment inserts. Truffle boxes, assorted chocolate boxes, bar packaging. Food-safe inner coating.</div><div class="ic-box-type">Box type: <strong>Rigid · Multi-compartment</strong></div></div>
-      <div class="ic"><div class="ic-icon">🍵</div><div class="ic-name">Tea, Coffee & Spice Brands</div><div class="ic-desc">Folding carton boxes for tea pouches, coffee packets, spice brands. Shelf-ready design, moisture-resistant coating. FMCG retail packaging.</div><div class="ic-box-type">Box type: <strong>Folding Carton · Mono Box</strong></div></div>
+      <div class="ic"><div class="ic-icon">🍵</div><div class="ic-name">Tea, Coffee & Spice Brands</div><div class="ic-desc">Folding carton boxes for tea pouches, coffee packets, spice brands. Shelf-ready design, moisture-resistant coating. FMCG retail packaging.</div><div class="ic-box-type">Box type: <strong>Folding Carton · Mono Carton</strong></div></div>
       <div class="ic"><div class="ic-icon">🥛</div><div class="ic-name">Dairy & Packaged Foods</div><div class="ic-desc">Outer cartons for packaged dairy, processed foods, snack brands, dry fruits. Corrugated outer shipping boxes and branded retail inner boxes.</div><div class="ic-box-type">Box type: <strong>Corrugated Outer · Retail Carton</strong></div></div>
       <div class="ic"><div class="ic-icon">🥗</div><div class="ic-name">Health Food & Nutraceuticals</div><div class="ic-desc">Premium packaging for healthy snacks, protein bars, organic products, ayurvedic food supplements. Clean, eco-conscious design matches the product ethos.</div><div class="ic-box-type">Box type: <strong>Folding Carton · Eco Kraft</strong></div></div>
     </div>
@@ -670,7 +673,7 @@ footer{background:var(--dk);padding:32px 56px;display:flex;justify-content:space
     <div class="ind-grid fi">
       <div class="ic"><div class="ic-icon">💊</div><div class="ic-name">Pharmaceutical Companies</div><div class="ic-desc">Medicine mono cartons, tablet/capsule folding boxes, strip packaging outer cartons. GMP-compliant paper packaging. Every medicine strip box you see is a paper carton.</div><div class="ic-box-type">Box type: <strong>Mono Carton · Folding Carton</strong></div></div>
       <div class="ic"><div class="ic-icon">🌿</div><div class="ic-name">Ayurvedic & Herbal Brands</div><div class="ic-desc">Eco-kraft packaging for ayurvedic supplements, herbal products, natural remedies. The paper material aligns with the brand story. Karnataka has a major ayurvedic cluster.</div><div class="ic-box-type">Box type: <strong>Eco Kraft Carton</strong></div></div>
-      <div class="ic"><div class="ic-icon">🏥</div><div class="ic-name">Hospitals & Diagnostic Centres</div><div class="ic-desc">Hospital gift kits, patient discharge boxes, diagnostic sample kits, medical device packaging. Clean, tamper-evident paper packaging for healthcare environments.</div><div class="ic-box-type">Box type: <strong>Tamper-evident · Clean Carton</strong></div></div>
+      <div class="ic"><div class="ic-icon">🏥</div><div class="ic-name">Hospitals & Diagnostic Centres</div><div class="ic-desc">Hospital gift kits, patient discharge boxes, diagnostic sample kits, OPD files, medical device packaging. Clean, tamper-evident paper packaging for healthcare environments.</div><div class="ic-box-type">Box type: <strong>Tamper-evident · Clean Carton</strong></div></div>
       <div class="ic"><div class="ic-icon">💪</div><div class="ic-name">Supplements & Nutraceuticals</div><div class="ic-desc">Premium packaging for protein powders, vitamin supplements, health drinks. Bangalore's health-conscious consumer market is a major demand driver.</div><div class="ic-box-type">Box type: <strong>Folding Carton · Premium Rigid</strong></div></div>
     </div>
     <div style="background:rgba(200,138,42,0.08);border:1px solid rgba(200,138,42,0.15);border-radius:6px;padding:18px 24px;margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.5)">
@@ -681,7 +684,6 @@ footer{background:var(--dk);padding:32px 56px;display:flex;justify-content:space
   <!-- TECH -->
   <div class="ind-panel cat-tech" id="tab-tech">
     <div class="ind-grid fi">
-      <div class="ic"><div class="ic-icon">📱</div><div class="ic-name">Mobile & Accessories</div><div class="ic-desc">Retail packaging boxes for mobile phones, chargers, earphones, covers, power banks. The sleek box your phone comes in is a paper rigid box. Every accessory brand needs these.</div><div class="ic-box-type">Box type: <strong>Rigid Box · Retail Pack</strong></div></div>
       <div class="ic"><div class="ic-icon">💡</div><div class="ic-name">LED & Lighting</div><div class="ic-desc">Corrugated outer cartons and folding carton retail boxes for LED bulbs, tube lights, panel lights, decorative lighting. Bangalore has hundreds of LED manufacturers.</div><div class="ic-box-type">Box type: <strong>Corrugated · Folding Carton</strong></div></div>
       <div class="ic"><div class="ic-icon">🔌</div><div class="ic-name">Electrical Components</div><div class="ic-desc">Corrugated transit boxes for switches, sockets, cables, wiring accessories. Protective packaging for small electrical parts from manufacturers to distributors.</div><div class="ic-box-type">Box type: <strong>Corrugated Shipping</strong></div></div>
       <div class="ic"><div class="ic-icon">🖥️</div><div class="ic-name">Consumer Electronics</div><div class="ic-desc">Outer shipping cartons for televisions, air conditioners, refrigerators, washing machines. Heavy-duty 5-ply and 7-ply corrugated for large appliance transport.</div><div class="ic-box-type">Box type: <strong>Heavy-duty Corrugated 5-7 ply</strong></div></div>
@@ -696,8 +698,8 @@ footer{background:var(--dk);padding:32px 56px;display:flex;justify-content:space
     <div class="ind-grid fi">
       <div class="ic"><div class="ic-icon">🥭</div><div class="ic-name">Mango & Tropical Fruit Export</div><div class="ic-desc">Karnataka is India's top mango producer. Premium Alphonso, Badami, Totapuri mangoes are exported in custom paper cartons to the Middle East, Europe and USA.</div><div class="ic-box-type">Box type: <strong>Corrugated Produce Box · Export Grade</strong></div></div>
       <div class="ic"><div class="ic-icon">🍇</div><div class="ic-name">Grapes & Berry Exports</div><div class="ic-desc">Ventilated paper punnets and cartons for fresh grapes, strawberries, blueberries. Food-safe, moisture-resistant options for cold chain export packaging.</div><div class="ic-box-type">Box type: <strong>Ventilated Produce Carton</strong></div></div>
-      <div class="ic"><div class="ic-icon">🌸</div><div class="ic-name">Floriculture & Nurseries</div><div class="ic-desc">Karnataka is a major flower exporter. Paper-based flower boxes for roses, gerberas, carnations. Export-compliant packaging for air freight to international markets.</div><div class="ic-box-type">Box type: <strong>Flower Carton · Export</strong></div></div>
-      <div class="ic"><div class="ic-icon">🌾</div><div class="ic-name">Spices & Agricultural Products</div><div class="ic-desc">Corrugated master cartons for packaged spices, pulses, dry goods. Karnataka produces some of India's finest coffee, spices and organic produce — all needing export boxes.</div><div class="ic-box-type">Box type: <strong>Master Carton · Transit Box</strong></div></div>
+      <div class="ic"><div class="ic-icon">🥕</div><div class="ic-name">Vegetable Export & Fresh Produce</div><div class="ic-desc">Export-ready corrugated cartons and paper crates for onions, vegetables, herbs and fresh produce. Designed for long-distance movement while keeping produce secure and ventilated.</div><div class="ic-box-type">Box type: <strong>Ventilated Produce Box · Export</strong></div></div>
+      <div class="ic"><div class="ic-icon">🌾</div><div class="ic-name">Packaged Foods & Agro Processing</div><div class="ic-desc">Corrugated master cartons for packaged spices, pulses, dry foods and agro-processing products. Karnataka's food and agricultural producers need scalable, export-ready packaging.</div><div class="ic-box-type">Box type: <strong>Master Carton · Transit Box</strong></div></div>
     </div>
     <div style="background:rgba(200,138,42,0.08);border:1px solid rgba(200,138,42,0.15);border-radius:6px;padding:18px 24px;margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.5)">
       ✦ India's agriculture & fisheries exports are <strong style="color:var(--k3)">USD 52.58 billion annually</strong> — every single shipment requires export-grade paper packaging. Karnataka is a top contributor.
@@ -720,10 +722,9 @@ footer{background:var(--dk);padding:32px 56px;display:flex;justify-content:space
   <!-- ECOM -->
   <div class="ind-panel cat-ecom" id="tab-ecom">
     <div class="ind-grid fi">
-      <div class="ic"><div class="ic-icon">📦</div><div class="ic-name">Amazon & Flipkart Sellers</div><div class="ic-desc">Custom-branded mailer boxes for online sellers. Amazon prep-ready boxes, Flipkart-compliant packaging. Brand your shipment from warehouse to customer doorstep.</div><div class="ic-box-type">Box type: <strong>Corrugated Mailer · Custom Print</strong></div></div>
-      <div class="ic"><div class="ic-icon">🛍️</div><div class="ic-name">D2C Subscription Brands</div><div class="ic-desc">Monthly subscription boxes for beauty, food, wellness, stationery. The unboxing experience IS the brand for D2C companies. AKC makes boxes that get photographed and posted.</div><div class="ic-box-type">Box type: <strong>Subscription Box · Rigid + Mailer</strong></div></div>
+      <div class="ic"><div class="ic-icon">📦</div><div class="ic-name">Online Retail & Marketplace Sellers</div><div class="ic-desc">Custom-branded mailer boxes and shipping cartons for direct-to-customer retail orders. Strong protection, sharp branding, and dependable presentation from warehouse to doorstep.</div><div class="ic-box-type">Box type: <strong>Corrugated Mailer · Custom Print</strong></div></div>
       <div class="ic"><div class="ic-icon">👗</div><div class="ic-name">Fashion & Apparel Brands</div><div class="ic-desc">Branded folding boxes and carry bags for clothing, footwear, accessories. Online fashion brands need premium packaging that matches their brand positioning.</div><div class="ic-box-type">Box type: <strong>Apparel Box · Carry Bag</strong></div></div>
-      <div class="ic"><div class="ic-icon">🔄</div><div class="ic-name">Quick Commerce (Q-commerce)</div><div class="ic-desc">Lightweight paper bags and boxes for Blinkit, Zepto, Swiggy Instamart. Micro-format packaging for hyper-local 10-minute delivery. Branded at every doorstep.</div><div class="ic-box-type">Box type: <strong>Micro-format · Lightweight</strong></div></div>
+      <div class="ic"><div class="ic-icon">🛍️</div><div class="ic-name">Retail & Boutique Brands</div><div class="ic-desc">Premium paper packaging for boutiques, lifestyle stores and retail collections. Packaging designed to feel as polished as the product inside.</div><div class="ic-box-type">Box type: <strong>Retail Box · Carry Bag</strong></div></div>
     </div>
     <div style="background:rgba(200,138,42,0.08);border:1px solid rgba(200,138,42,0.15);border-radius:6px;padding:18px 24px;margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.5)">
       ✦ India processed <strong style="color:var(--k3)">5.2 billion e-commerce shipments in 2024</strong>, growing 35%+ per year. Every single package requires a box. E-commerce is the fastest-growing demand driver for custom paper packaging.
@@ -732,9 +733,12 @@ footer{background:var(--dk);padding:32px 56px;display:flex;justify-content:space
 
   <!-- GIFT -->
   <div class="ind-panel cat-gift" id="tab-gift">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap">
+      <div style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Corporate gifting, weddings and premium retail presentation.</div>
+      <a href="gifting-and-premium.html" style="font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--k3);font-weight:600">View Gifting &amp; Premium Packaging Solutions →</a>
+    </div>
     <div class="ind-grid fi">
       <div class="ic"><div class="ic-icon">🎁</div><div class="ic-name">Corporate Gifting</div><div class="ic-desc">Multi-layer rigid gift boxes for Diwali, New Year, onboarding kits. Bangalore's 5,000+ IT companies spend crores on corporate gifts every year. Premium is the expectation.</div><div class="ic-box-type">Box type: <strong>Multi-layer Rigid · Insert System</strong></div></div>
-      <div class="ic"><div class="ic-icon">💍</div><div class="ic-name">Jewellery Brands</div><div class="ic-desc">Premium rigid boxes for rings, necklaces, bangles. Foam-insert lining, velvet finish options, magnetic closure. Jewellery packaging is the brand's silent salesperson.</div><div class="ic-box-type">Box type: <strong>Premium Rigid · Foam Insert</strong></div></div>
       <div class="ic"><div class="ic-icon">💒</div><div class="ic-name">Weddings & Events</div><div class="ic-desc">Return gift boxes, wedding sweet packaging, favour boxes, mehndi/haldi kits. Bangalore's wedding industry is one of India's largest — premium packaging is essential.</div><div class="ic-box-type">Box type: <strong>Premium Rigid · Custom Print</strong></div></div>
       <div class="ic"><div class="ic-icon">🏛️</div><div class="ic-name">Luxury Retail & Boutiques</div><div class="ic-desc">High-end carry bags and boxes for luxury boutiques, designer stores, gourmet shops. Soft-touch lamination, gold foil, ribbon handles. Packaging that commands attention.</div><div class="ic-box-type">Box type: <strong>Luxury Rigid · Rope Bag</strong></div></div>
     </div>
@@ -748,8 +752,7 @@ footer{background:var(--dk);padding:32px 56px;display:flex;justify-content:space
     <div class="ind-grid fi">
       <div class="ic"><div class="ic-icon">🚗</div><div class="ic-name">Automotive & Auto Parts</div><div class="ic-desc">Heavy-duty corrugated boxes for auto parts, spare parts, components. From small bearings to large body panels — each needs correct-spec paper packaging for safe transit.</div><div class="ic-box-type">Box type: <strong>Heavy Corrugated · Custom Spec</strong></div></div>
       <div class="ic"><div class="ic-icon">🔧</div><div class="ic-name">Hardware & Tools</div><div class="ic-desc">Corrugated packaging for hand tools, power tools, hardware kits. Retail display boxes for tools sold in hardware stores. Bangalore has a large hardware distribution market.</div><div class="ic-box-type">Box type: <strong>Corrugated · Retail Display</strong></div></div>
-      <div class="ic"><div class="ic-icon">👕</div><div class="ic-name">Textiles & Apparel Manufacturing</div><div class="ic-desc">Transit boxes for garment exports, fabric rolls, finished clothing. Karnataka is a major garment export hub — millions of boxes are needed for textile shipping.</div><div class="ic-box-type">Box type: <strong>Export Corrugated · Master Carton</strong></div></div>
-      <div class="ic"><div class="ic-icon">🏗️</div><div class="ic-name">Construction & Home Products</div><div class="ic-desc">Packaging for tiles, sanitaryware, plumbing accessories, fittings, hardware. Corrugated boxes for heavy products needing protection during logistics and retail display.</div><div class="ic-box-type">Box type: <strong>Heavy Corrugated · Retail Carton</strong></div></div>
+      <div class="ic"><div class="ic-icon">👕</div><div class="ic-name">Textiles & Apparel Manufacturing</div><div class="ic-desc">Transit boxes for garment exports and finished clothing. Karnataka is a major garment export hub — millions of boxes are needed for textile shipping.</div><div class="ic-box-type">Box type: <strong>Export Corrugated · Master Carton</strong></div></div>
     </div>
     <div style="background:rgba(200,138,42,0.08);border:1px solid rgba(200,138,42,0.15);border-radius:6px;padding:18px 24px;margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.5)">
       ✦ Industrial and automotive packaging is one of the most <strong style="color:var(--k3)">volume-intensive segments</strong> — auto parts manufacturers place recurring large orders monthly. Karnataka's Peenya industrial area alone represents a massive local opportunity.
@@ -808,41 +811,39 @@ footer{background:var(--dk);padding:32px 56px;display:flex;justify-content:space
     <div class="sg sg-local">
       <div class="sg-phase" style="color:var(--k2)">Phase 1 — Immediate</div>
       <div class="sg-title">Bangalore & Karnataka</div>
-      <div class="sg-desc">Our home ground. We already know the bakeries, the cloud kitchens, the sweet shops. Fast delivery, quick sample turnaround, personal service.</div>
+      <div class="sg-desc">Our home ground. We focus first on Bangalore's premium food, cafe, gifting and export-led businesses, then expand into Karnataka clusters with the same fast delivery and personal service.</div>
       <div class="sg-targets">
         <span class="sg-t">Food & Beverage sector — highest priority</span>
         <span class="sg-t">Gifting & premium brands</span>
         <span class="sg-t">Peenya industrial cluster</span>
-        <span class="sg-t">Koramangala / Indiranagar cloud kitchen belt</span>
-        <span class="sg-t">BTM / Jayanagar sweet shop corridor</span>
+        <span class="sg-t">Koramangala / Indiranagar cafe belt</span>
+        <span class="sg-t">Bangalore-led export packaging accounts</span>
       </div>
       <div class="sg-metric">10,000+ <div class="sg-metric-l">potential clients in Bangalore alone</div></div>
     </div>
     <div class="sg sg-south">
       <div class="sg-phase" style="color:var(--g3)">Phase 2 — 6 to 12 Months</div>
-      <div class="sg-title">South India Market</div>
-      <div class="sg-desc">Tamil Nadu, Andhra Pradesh, Telangana, Kerala. Each state has its own massive food, pharma, and industrial packaging demand. Same product, wider geography.</div>
+      <div class="sg-title">Karnataka Expansion</div>
+      <div class="sg-desc">We deepen coverage across Karnataka's manufacturing, food, pharma and export hubs while keeping Bangalore as the primary operating base.</div>
       <div class="sg-targets">
-        <span class="sg-t">Chennai manufacturing & FMCG cluster</span>
-        <span class="sg-t">Hyderabad pharma corridor (Genome Valley)</span>
-        <span class="sg-t">Coimbatore textile & manufacturing belt</span>
-        <span class="sg-t">Kerala coconut & agricultural export packaging</span>
-        <span class="sg-t">Vizag port — export packaging</span>
+        <span class="sg-t">Mysuru premium food & hospitality demand</span>
+        <span class="sg-t">Hubballi & Belagavi export packaging</span>
+        <span class="sg-t">Mangaluru coastal food & spice packaging</span>
+        <span class="sg-t">Tumakuru and industrial supply chains</span>
       </div>
-      <div class="sg-metric">50,000+ <div class="sg-metric-l">addressable businesses in South India</div></div>
+      <div class="sg-metric">3,000+ <div class="sg-metric-l">target businesses across Karnataka</div></div>
     </div>
     <div class="sg sg-national">
       <div class="sg-phase" style="color:#2A80C8">Phase 3 — 12+ Months</div>
-      <div class="sg-title">Pan-India & Export</div>
-      <div class="sg-desc">IndiaMart B2B, export buyers from Middle East, SE Asia and Europe. India's paper packaging cost advantage is 40% lower than European alternatives.</div>
+      <div class="sg-title">Bangalore-Led Premium Growth</div>
+      <div class="sg-desc">Bangalore remains our lead market for premium food, gifting and high-end retail packaging, with export-ready solutions supporting larger brand accounts.</div>
       <div class="sg-targets">
-        <span class="sg-t">IndiaMart B2B premium listing — pan-India reach</span>
-        <span class="sg-t">UAE, Saudi Arabia — Indian diaspora gifting demand</span>
-        <span class="sg-t">SE Asia — eco-packaging demand growing fast</span>
-        <span class="sg-t">Europe — sustainability regulations driving import</span>
-        <span class="sg-t">Agri & floriculture export packaging — airport freight</span>
+        <span class="sg-t">Premium cafe and bakery packaging</span>
+        <span class="sg-t">Corporate gifting and luxury retail clients</span>
+        <span class="sg-t">Karnataka export packaging accounts</span>
+        <span class="sg-t">B2B referrals from design and print partners</span>
       </div>
-      <div class="sg-metric">$46B+ <div class="sg-metric-l">India paper packaging market size by 2030</div></div>
+      <div class="sg-metric">₹100Cr+ <div class="sg-metric-l">addressable premium packaging demand in Bangalore</div></div>
     </div>
   </div>
 </section>
@@ -887,7 +888,7 @@ footer{background:var(--dk);padding:32px 56px;display:flex;justify-content:space
         <div class="rs-title">🎯 The Sample Kit Strategy</div>
         <div class="rs-desc">Every month, a physical sample box is dispatched to 20 hand-picked target clients. Nothing closes a packaging deal faster than letting the buyer touch and feel the product quality. One premium box, perfectly finished, turns a cold lead into a committed client.</div>
       </div>
-      <div class="rs-card" style="background:#EFF9F0;border-left-color:var(--g3)">
+      <div class="rs-card" style="background:#FBEFF0;border-left-color:var(--g3)">
         <div class="rs-title">📍 Local Networking Communities</div>
         <div class="rs-desc">Bangalore's business networking groups — vyapara vedikes, industry associations, MSME forums — are where the city's business owners meet and trust each other. AKC Craftbox actively participates and builds relationships where decisions happen organically.</div>
       </div>
